@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-first-project": {
+    "angular-super-mart": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-first-project",
+            "outputPath": "dist/angular-super-mart",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles.css",
               "../node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": []
@@ -63,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-first-project:build"
+            "browserTarget": "angular-super-mart:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-first-project:build:production"
+              "browserTarget": "angular-super-mart:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-first-project:build"
+            "browserTarget": "angular-super-mart:build"
           }
         },
         "test": {
@@ -89,7 +85,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -111,15 +107,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-first-project:serve"
+            "devServerTarget": "angular-super-mart:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-first-project:serve:production"
+              "devServerTarget": "angular-super-mart:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "my-first-project"
+  "defaultProject": "angular-super-mart"
 }
